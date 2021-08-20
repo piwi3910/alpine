@@ -1,7 +1,7 @@
 dist: focal
 language: minimal
 env:
-  - ARCH="linux/arm/v7,linux/arm64,linux/amd64" IMAGE_NAME="ubuntu" RELEASE="3.14"
+  - ARCH="linux/arm/v7,linux/arm64,linux/amd64" IMAGE_NAME="alpine" RELEASE="3.14"
 
 services:
   - docker
@@ -47,7 +47,7 @@ jobs:
     - docker buildx inspect
     - docker buildx inspect --bootstrap
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker buildx build --platform $ARCH --build-arg VERSION=${RELEASE} -t ${DOCKER_USERNAME}/${IMAGE_NAME}:${TRAVIS_TAG} -t ${DOCKER_USERNAME}/${IMAGE_NAME}:${UBUNTU_RELEASE}_${TRAVIS_TAG} -t ${DOCKER_USERNAME}/${IMAGE_NAME}:latest . --push
+    - docker buildx build --platform $ARCH --build-arg VERSION=${RELEASE} -t ${DOCKER_USERNAME}/${IMAGE_NAME}:${TRAVIS_TAG} -t ${DOCKER_USERNAME}/${IMAGE_NAME}:latest . --push
 
   - stage: dockerhub_readme
     script:
