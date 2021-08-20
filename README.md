@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Logo-alpine_no%28r%29-black_orange-hex.svg/250px-Logo-alpine_no%28r%29-black_orange-hex.svg.png">
+  <img width="300px" src="https://raw.githubusercontent.com/docker-library/docs/781049d54b1bd9b26d7e8ad384a92f7e0dcb0894/alpine/logo.png">
 </p>
 
 # alpine
