@@ -1,7 +1,7 @@
 dist: focal
 language: minimal
 env:
-  - ARCH="linux/arm/v6,linux/arm/v7,linux/arm64,linux/amd64" IMAGE_NAME="ubuntu" RELEASE="3.14"
+  - ARCH="linux/arm/v7,linux/arm64,linux/amd64" IMAGE_NAME="ubuntu" RELEASE="3.14"
 
 services:
   - docker
